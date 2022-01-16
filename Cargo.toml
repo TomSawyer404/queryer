@@ -16,10 +16,14 @@ anyhow = "1" # 错误处理，其实对于库我们应该用 thiserror，但这�
 async-trait = "0.1" # 允许 trait 里有 async fn
 sqlparser = "0.12.0" # SQL 解析器
 polars = { version = "0.17.0", features = ["json", "lazy"] } # DataFrame 库
-reqwest = { version = "0.11", default-features = false, features = ["rustls-tls"] } # HTTP client
+reqwest = { version = "0.11", default-features = false, features = [
+    "rustls-tls",
+] } # HTTP client
 tokio = { version = "1", features = ["fs"] } # 异步库
 tracing = "0.1" # 日志处理
 
 [dev-dependencies]
 tracing-subscriber = "0.3" # 日志处理
-tokio = { version = "1", features = ["full"] } # 在 example 下我们需要更多的 tokio feature
+tokio = { version = "1", features = [
+    "full",
+] } # 在 example 下我们需要更多的 tokio feature

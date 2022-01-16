@@ -1,4 +1,9 @@
+mod convert;
 mod dialect;
+mod fetcher;
+
+pub use dialect::example_sql;
+pub use dialect::TryDialect;
 
 #[cfg(test)]
 mod tests {
